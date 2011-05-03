@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="clojure.jar" sourcepath="clojure-src.jar"/>
 	<classpathentry kind="lib" path="clojure-contrib.jar" sourcepath="clojure-contrib-src.jar"/>
 	<classpathentry kind="lib" path="classes"/>
+	<classpathentry kind="lib" path="compiled-libs.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
