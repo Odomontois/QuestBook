@@ -5,7 +5,7 @@
 <%@page import="ru.nol.qbook.persistence.Chat"%>
 <%@page import="ru.nol.qbook.greet.Greeter"%>
 <%@page import="ru.nol.qbook.greet.GentlemanGreeter"%>
-<%@page import="ru.nol.qbook.greet.ClojureGreeter" %>
+<%@page import="ru.nol.qbook.greet.ClojureGreeter"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -32,11 +32,12 @@
 		service.onreadystatechange = function() {
 			  if (this.readyState == 4) {
 			     if(this.status == 200) {
-			       alert(this.responseText);
-			         }
+			       obj = JSON.parse(this.responseText);
+			       alert(obj.value);
+			     }
 			  }
 			};
-		service.send("{ \"value\" : 2}");
+		service.send(JSON.stringify({"value" : 2}));
 	</script>
 </body>
 </html>
