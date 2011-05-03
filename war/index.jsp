@@ -26,5 +26,17 @@
 </head>
 <body>
 	<b><%=greeter.getProposal()%></b>
+	<script type="text/javascript">
+		service = XMLHttpRequest();
+		service.open("POST","/serv/good",true);
+		service.onreadystatechange = function() {
+			  if (this.readyState == 4) {
+			     if(this.status == 200) {
+			       alert(this.responseText);
+			         }
+			  }
+			};
+		service.send("{ \"value\" : 2}");
+	</script>
 </body>
 </html>

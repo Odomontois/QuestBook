@@ -23,4 +23,20 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>XMPPChat</servlet-name>
 		<url-pattern>/_ah/xmpp/message/chat/</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>BadService</servlet-name>
+		<servlet-class>ru.nol.qbook.serv.BadService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GoodService</servlet-name>
+		<servlet-class>ru.nol.qbook.serv.GoodService</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoodService</servlet-name>
+		<url-pattern>/serv/good</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BadService</servlet-name>
+		<url-pattern>/serv/bad</url-pattern>
+	</servlet-mapping>
 </web-app>
